@@ -90,11 +90,13 @@ Database	🐘 PostgreSQL 15 + Redis (сессии, кэш)
 
 👤 User	id, email, username, password_hash, bio, last_seen, is_online
 
-👤 Avatar	id, user_id, avatar_url, created_at
+👤 Avatar	id, user_id, avatar_url, created_at, is_primary
 
 🔐 Session id, user_id, refresh_token, fingerprint, expires_at, created_at
 
 💬 Chat	id, type (private, group, channel), title, avatar_url, created_at
+
+💬 ChannelSettings, id, chat_id, description, is_private
 
 👥 ChatParticipant	id, chat_id, user_id, role (member, moderator, admin, owner), joined_at, last_read_message_id
 
@@ -110,7 +112,7 @@ Database	🐘 PostgreSQL 15 + Redis (сессии, кэш)
 
 🗃 ER-диаграмма
 
-<img width="1147" height="1086" alt="изображение" src="https://github.com/user-attachments/assets/38f51fe5-95af-49d6-9bb8-85a8ca384cdf" />
+<img width="1133" height="947" alt="изображение" src="https://github.com/user-attachments/assets/b9750b26-9306-4bbf-9c80-20b5ba70db03" />
 
 🏗 Архитектура системы
 
